@@ -36,6 +36,9 @@ mongoose.connect(uri,    {
     .then(() => console.log('MongoDB Connected successfully.'))
     .catch((err) => console.error('MongoDB connection error:',err));
 
+app.get('/', (req, res) => {
+    res.status(200).send('Cost Manager API is live!');
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
